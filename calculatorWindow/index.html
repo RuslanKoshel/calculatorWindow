@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Калькулятор Окон</title>
+	<style>
+	
+	img{
+	padding: 10px 10px 10px 10px; 
+	//margin:  10px 10px 10px 10px; 
+	//height: 100px;
+	//width: 100px; 
+	}
+	.img{
+	border: 1px solid black;
+	background: #fff;
+	//height: 100px;
+	}
+	#imq{
+		height: 295px;
+	}
+
+	.bigImag{
+	padding: 10px 10px 0px 100px; 
+	}
+	.b-window__measure-h-input {
+    position: absolute;
+    left: 40px;
+    top: 450px;
+	}
+	.b-window__measure-w-input {
+    position: absolute;
+    left: 200px;
+    top: 490px;
+	}
+	.b-window__measure-input input {
+    float: left;
+    width: 45px;
+    height: 20px;
+    padding: 0 3px;
+    border: 2px solid #79a23e;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #79a23e;
+	}
+	.b-window__measure-summ-input {
+    position: absolute;
+    left: 50px;
+    top: 550px;
+	}
+	.b-window__measure-summRaz-input {
+    position: absolute;
+    left: 275px;
+    top: 550px;
+	}
+	.b-window__measure-summRaz-input input {
+	height: 25px;
+    width: 95px;
+	}
+	.b-window__measure-summ-input input {
+	width: 115px;	
+	}
+	.b-tabs-windows {
+    display: table;
+    max-width: 660px;
+    width: 100%;
+    background: #4e74b9;
+	}
+	.b-tabs-windows__img {
+    display: table-cell;
+    height: 90px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+	}
+	.b-tabs-windows__label {
+    display: block;
+    height: 50px;
+    text-align: center;
+    background: #859ed2;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+	}
+	.b-tabs-windows__wrap{
+    display: table-cell;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: bottom;
+    color: #0093db;
+    outline-style: none;
+	}
+	</style>
+</head>
+<body>
+	
+	<div>
+		<div>
+			Онлайн кальуклятор окон
+		</div>
+		<nav class="b-tabs-windows">
+					<span class="b-tabs-windows__wrap">
+						<span class="b-tabs-windows__img"><img src="imag/gl.png"onClick="imgsrc()" alt="Створка глухая"> </span>
+						<span class="b-tabs-windows__label"><span>Створка глухая</span></span>
+					</span>
+				
+					<span class="b-tabs-windows__wrap">
+						<span class="b-tabs-windows__img"><img src="imag/lpo.png"onClick="imgsrc1()" alt="Поворотно-откидная"></span>
+						<span class="b-tabs-windows__label"><span>Поворотно-откидная</span></span>
+					</span>
+				
+				
+					<span class="b-tabs-windows__wrap">
+						<span class="b-tabs-windows__img"><img src="imag/gl+lpo.png"onClick="imgsrc2()" alt="Глухая + поворотно-откидная"></span>
+						<span class="b-tabs-windows__label"><span>Глухая + поворотно-откидная</span></span>
+					</span>
+
+				
+					<span class="b-tabs-windows__wrap">
+						<span class="b-tabs-windows__img"><img src="imag/lpo+gl+lpo.png" onClick="imgsrc3()" alt="Поворотно-откидная + глухая + поворотно-откидная"></span>
+						<span class="b-tabs-windows__label"><span>Поворотно-откидная + глухая + поворотно-откидная</span></span>
+					</span>
+			
+				
+					<span class="b-tabs-windows__wrap">
+						<span class="b-tabs-windows__img"><img src="imag/gl+lpo+gl.png" onClick="imgsrc4()" alt="Глухая + поворотно-откидная + глухая"></span>
+						<span class="b-tabs-windows__label"><span>Глухая + поворотно-откидная + глухая</span></span>
+					</span>
+				
+					<span class="b-tabs-windows__wrap">
+						<span class="b-tabs-windows__img"><img src="imag/gl+lpo+lpo+gl.png" onClick="imgsrc5()" alt="Балконный блок"></span>
+						<span class="b-tabs-windows__label"><span>Балконный блок</span></span>
+					</span>
+					
+					<span class="b-tabs-windows__wrap">
+						<span class="b-tabs-windows__img"><img src="imag/ld.png" onClick="imgsrc6()" alt="Створка дверная"></span>
+						<span class="b-tabs-windows__label"><span>Створка дверная</span></span>
+					</span>
+				
+			</nav>
+		</nav>
+		<!--  <div class="img">
+			<img src="imag/gl.png">
+			<img src="imag/lpo.png">
+			<img src="imag/gl+lpo.png">
+			<img src="imag/gl+lpo+gl.png">
+			<img src="imag/lpo+gl+lpo.png">
+			<img src="imag/gl+lpo+lpo+gl.png">
+			<img src="imag/ld.png">
+		</div>Комментарий-->
+		<div class="bigImag" id="list1">
+			<img id="imq" src="imag/img/gl.png">
+			<span class="b-window__measure-input b-window__measure-w-input"><input id="w" name="w" value="700"><span>мм</span></span>
+			<span class="b-window__measure-input b-window__measure-h-input"><input id="h" name="h" value="1200"><span>мм</span></span>
+			
+			<span  class="b-window__measure-input b-window__measure-summ-input">
+			<input id="summ"  class="b-window__measure-input  name="summ" value="12587.54"><span>грн.</span></span>
+			<span class="b-window__measure-input b-window__measure-summRaz-input">
+			<input  type="button" onClick="summ()" value="Расчитать" ></span>
+		</div>
+		<!--<div class="bigImag1" id="list">
+			<img src="imag/img/gl+lpo.png">
+			<span class="b-window__measure-input b-window__measure-w-input"><input name="w" value="700"><span>мм</span></span>
+			<span class="b-window__measure-input b-window__measure-h-input"><input name="h" value="1200"><span>мм</span></span>
+			<span class="b-window__measure-input b-window__measure-summ-input">
+			<input name="summ" value="100001,154"><span>грн.</span></span>
+		</div>-->
+
+	</div>
+<script >
+	function imgsrc(){
+		var ar = document.getElementById('imq');
+		//var imq = document.getElementsByClassName('imq');
+		var img = document.createElement("IMG");
+			img.id = "imq";
+	        img.src = "imag/img/gl.png";
+	        ar.parentNode.replaceChild(img, ar);
+	}
+function imgsrc1(){
+		var ar = document.getElementById('imq');
+		
+		var img = document.createElement("IMG");
+	        img.src = "imag/img/lpo.png";
+	        img.id = "imq";
+	        ar.parentNode.replaceChild(img, ar);
+	}
+function imgsrc2(){
+		var ar = document.getElementById('imq');
+		//var imq = document.getElementsByClassName('imq');
+		var img = document.createElement("IMG");
+			img.id = "imq";
+	        img.src = "imag/img/gl+lpo.png";
+	        ar.parentNode.replaceChild(img, ar);
+	}
+function imgsrc3(){
+		var ar = document.getElementById('imq');
+		//var imq = document.getElementsByClassName('imq');
+		var img = document.createElement("IMG");
+			img.id = "imq";
+	        img.src = "imag/img/lpo+gl+lpo.png";
+	        ar.parentNode.replaceChild(img, ar);
+	}	
+function imgsrc4(){
+		var ar = document.getElementById('imq');
+		//var imq = document.getElementsByClassName('imq');
+		var img = document.createElement("IMG");
+			img.id = "imq";
+	        img.src = "imag/img/gl+lpo+gl.png";
+	        ar.parentNode.replaceChild(img, ar);
+	}	
+function imgsrc5(){
+		var ar = document.getElementById('imq');
+		//var imq = document.getElementsByClassName('imq');
+		var img = document.createElement("IMG");
+			img.id = "imq";
+	        img.src = "imag/img/gl+lpo+lpo+gl.png";
+	        ar.parentNode.replaceChild(img, ar);
+	}
+function imgsrc6(){
+		var ar = document.getElementById('imq');
+		//var imq = document.getElementsByClassName('imq');
+		var img = document.createElement("IMG");
+			img.id = "imq";
+	        img.src = "imag/img/ld.png";
+	        ar.parentNode.replaceChild(img, ar);
+	}	
+
+function summ(){
+	var w = document.getElementById('w').value;
+	var h = document.getElementById('h').value;
+
+	var ara = document.getElementById('imq');
+	var x = ara.attributes.src.value;
+
+		if (x == "imag/img/gl.png") {
+			var summ1 =Math.round((Number(w) + Number(h))* 2.89 * 0.9* 10) / 10 ; //2.89 цена профиля 1.1 сложность работы
+		}else if (x =="imag/img/lpo.png"){
+			var summ1 = Math.round((Number(w) + Number(h))* 2.89 * 1.1* 10) / 10  ;
+		 }else if (x =="imag/img/gl+lpo.png"){
+			var summ1 =  Math.round((Number(w) + Number(h))* 2.89 * 1.3* 10) / 10  ;
+		 }else if (x =="imag/img/lpo+gl+lpo.png"){
+			var summ1 =  Math.round((Number(w) + Number(h))* 2.89 * 1.4* 10) / 10  ;
+		 }else if (x =="imag/img/gl+lpo+gl.png"){
+			var summ1 =  Math.round((Number(w) + Number(h))* 2.89 * 1.5* 10) / 10 ;
+		 }else if (x =="imag/img/gl+lpo+lpo+gl.png"){
+			var summ1 =  Math.round((Number(w) + Number(h))* 2.89 * 1.6* 10) / 10  ;
+		 }else if (x =="imag/img/ld.png"){
+			var summ1 =  Math.round((Number(w) + Number(h))* 2.89 * 1.7* 10) / 10  ;
+		 }
+console.log(summ1);
+
+	if (!summ1){
+		var re = document.getElementById('summ');
+		var inp = document.createElement("input");
+		inp.id = "summ";
+		inp.name = "summ";
+		inp.value = " введите число";
+		re.parentNode.replaceChild(inp,re);
+	}else{	 
+		// result = ara.attributes.src;
+    	//var summ1 = Number(w) + Number(h) +1;
+		var re = document.getElementById('summ');
+		var inp = document.createElement("input");
+		inp.id = "summ";
+		inp.name = "summ";
+		inp.value = summ1;
+		re.parentNode.replaceChild(inp,re);
+	
+}
+//console.log(summ1);
+	//alert(result);
+}	
+</script>
+
+	
+</body>
+</html>
